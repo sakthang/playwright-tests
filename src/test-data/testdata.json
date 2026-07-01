@@ -1,0 +1,27 @@
+{
+  "singleTestData": {
+    "name": "Tester1",
+    "email": "tester1@mail.com",
+    "message": "Hello tester1"
+  },
+
+  "multilTestData": [
+    { "name": "Tester1", "email": "tester1@mail.com", "message": "Hello tester1" },
+    { "name": "Tester2", "email": "tester2@mail.com", "message": "Hello tester2" },
+    { "name": "Tester3", "email": "tester3@mail.com", "message": "Hello tester3" },
+    { "name": "Tester4", "email": "tester4@mail.com", "message": "Hello tester4" },
+    { "name": "Tester5", "email": "tester5@mail.com", "message": "Hello tester5" }
+  ],
+
+  "product":
+   [ {"name": "Teddy Bear", "quantity" : 2 },
+     {"name": "Fluffy Bunny", "quantity" : 5 },
+     {"name": "Valentine Bear", "quantity" : 3}
+],
+
+
+  "common": {
+    "amount": 1000,
+    "currency": "USD"
+  }
+}
