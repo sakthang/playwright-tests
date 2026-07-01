@@ -1,5 +1,5 @@
 
-import BasePage from './base.page';
+const BasePage = require('./base.page');
 
 class ContactPage extends BasePage {
   constructor(page) {
@@ -38,25 +38,25 @@ class ContactPage extends BasePage {
   }
 
   async clickSubmit() {
-    await this.click(this.btn_submit);
+    await this.click(this.btn_submit());
   }
 
   async fillMandatoryFields(name, email, message) {
-    await this.fill(this.input_name, name);
-    await this.fill(this.input_email, email);
-    await this.fill(this.input_message, message);
+    await this.fill(this.input_name(), name);
+    await this.fill(this.input_email(), email);
+    await this.fill(this.input_message(), message);
   }
 
   async verifyErrorsVisible() {
-    await this.expectVisible(this.error_name);
-    await this.expectVisible(this.error_email);
-    await this.expectVisible(this.error_message);
+    await this.expectVisible(this.error_name());
+    await this.expectVisible(this.error_email());
+    await this.expectVisible(this.error_message());
   }
 
   async verifyErrorsGone() {
-    await this.expectHidden(this.error_name);
-    await this.expectHidden(this.error_email);
-    await this.expectHidden(this.error_message);
+    await this.expectHidden(this.error_name());
+    await this.expectHidden(this.error_email());
+    await this.expectHidden(this.error_message());
   }
 
   
@@ -68,7 +68,7 @@ class ContactPage extends BasePage {
 }
 
   async verifySuccessMessage() {
-    await this.expectVisible(this.success_message);
+    await this.expectVisible(this.success_message());
   }
 }
 

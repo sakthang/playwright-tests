@@ -36,7 +36,6 @@ test('Error validation when mandatory fields not entered ', async ({ page }) => 
   */
   
   testData.multilTestData.forEach((data) => {
-
   test(`Submitting contact page with ${data.name}`, async ({ page }) => {
 
     const home = new HomePage(page);
