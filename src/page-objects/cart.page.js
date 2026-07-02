@@ -14,20 +14,16 @@ class CartPage extends BasePage {
      await this.waitForVisible(this.tablerow().first()); 
      const rows = await this.getRowCount(this.tablerow());//count();
      const {priceIndex, quantityIndex, subTotalIndex} = await this.getHeaderIndexes(this.tableheader());
-     let finalTotal = 0;
-     
-    const cartItems = [];
+     let finalTotal = 0; 
+     const cartItems = [];
 
-     for (let i = 0; i < rows ; i++ )
+    for (let i = 0; i < rows ; i++ )
           {
     const row = this.tablerow().nth(i);
     
     const productName = (await row.locator('td').first().textContent()).trim();
- 
     const price =  parseFloat((await row.locator('td').nth(priceIndex).textContent()).replace(/[^0-9.]/g, ''));
- 
     const quantity = parseInt(await row.locator('input').inputValue());
- 
     const subTotal = parseFloat((await row.locator('td').nth(subTotalIndex).textContent()).replace(/[^0-9.]/g, ''));
       cartItems.push({
       productName,
@@ -41,7 +37,6 @@ class CartPage extends BasePage {
     cartItems,
     finalTotal
   };
-
 }
 }
 module.exports = CartPage;
