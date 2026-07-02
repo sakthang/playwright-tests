@@ -5,7 +5,7 @@
     "message": "Hello tester1"
   },
 
-  "multilTestData": [
+  "multiTestData": [
     { "name": "Tester1", "email": "tester1@mail.com", "message": "Hello tester1" },
     { "name": "Tester2", "email": "tester2@mail.com", "message": "Hello tester2" },
     { "name": "Tester3", "email": "tester3@mail.com", "message": "Hello tester3" },

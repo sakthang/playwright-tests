@@ -4,16 +4,13 @@ const HomePage = require('../page-objects/home.page.js');
 const testData = require('../test-data/testdata.json');
 const ShopPage = require('../page-objects/shop.page.js');
 const CartPage = require('../page-objects/cart.page.js');
-
 const BASE_URL = "http://jupiter.cloud.planittesting.com";
 
 test('Verify Cartpage subtotal and total for purchased items ', async ({ page }) => {
-
+    await page.goto(BASE_URL);  
     const homePage = new HomePage(page);
     const shopPage = new ShopPage(page);
     const cartPage = new CartPage(page);
-
-    await homePage.navigate(BASE_URL);
     await homePage.goToShopPage();
 
    for (const productToBuy of testData.product) {

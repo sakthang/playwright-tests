@@ -1,12 +1,8 @@
-import { expect } from '@playwright/test';
+const { expect } = require('@playwright/test');
 
 class BasePage {
   constructor(page) {
     this.page = page;
-  }
-
-  async navigate(url) {
-    await this.page.goto(url);
   }
 
   async click(element) {
@@ -61,8 +57,7 @@ class BasePage {
 
   async convertTxtToFloat(element)
   {
-return await parseFloat(element.replace(/[^0-9.]/g, ''));
+    return await parseFloat(element.replace(/[^0-9.]/g, ''));
   }
 }
-
 module.exports = BasePage;
