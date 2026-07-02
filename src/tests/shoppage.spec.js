@@ -31,7 +31,7 @@ test('Verify Cartpage subtotal and total for purchased items ', async ({ page })
 
   for (const item of cartItems) {
     expect(item.price).toBeCloseTo(
-      dataToAssert[item.productName],2);
+      dataForAssertion[item.productName],2);
 
     expect(item.subTotal).toBeCloseTo(
       item.price * item.quantity,2);
